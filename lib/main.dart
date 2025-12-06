@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_app_gestream_io/app/my_app.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 
 void main() async {
-  final client = StreamChatClient('zak4dz929w4e', logLevel: Level.INFO);
+  await dotenv.load();
+
+  final client = StreamChatClient(
+    dotenv.env['GETSTREAM_API_KEY']!,
+    logLevel: Level.INFO,
+  );
   await client.connectUser(
     User(id: 'flutter_chat_app'),
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmx1dHRlcl9jaGF0X2FwcCIsImlhdCI6MTc2NTA0MDQyMX0.DGPcEZkr63GKFd0J1DvJIGVHVmuDmPnDG3Gaiwn6C6A',
+    dotenv.env['GETSTREAM_TOKEN']!,
   );
   // We create a channel tailored for messaging.
   // 'messaging' is the channel type. Stream supports 4 pre-configured types:

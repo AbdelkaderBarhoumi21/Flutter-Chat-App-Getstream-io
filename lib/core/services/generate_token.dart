@@ -1,13 +1,14 @@
-
 import 'dart:io';
-import 'package:flutter/material.dart';
+
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 void main() {
-  final secret =
-      '2ubxchg7ewqqpvtdwts8279vuhsm28ef5fjx538z55j9dxf9qp8b962rxue2r7gc';
+  final secret = dotenv.env['GETSTREAM_SECRET_KEY'];
   final jwt = JWT({'user_id': 'flutter_chat_app'});
 
-  final token = jwt.sign(SecretKey(secret), algorithm: JWTAlgorithm.HS256);
+  final token = jwt.sign(SecretKey(secret!));
 
   // Write to a file so we can read it easily without copy-paste issues
   File('token_dart.txt').writeAsStringSync(token);
