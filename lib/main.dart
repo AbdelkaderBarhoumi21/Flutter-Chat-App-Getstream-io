@@ -4,7 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 
 void main() async {
-  await dotenv.load();
+  await dotenv.load(fileName: '.env');
 
   final client = StreamChatClient(
     dotenv.env['GETSTREAM_API_KEY']!,

@@ -30,8 +30,8 @@ class AppTheme {
   static const accentColor = AppColors.accent;
   static final visualDensity = VisualDensity.adaptivePlatformDensity;
 
-  final darkBase = ThemeData.dark();
-  final lightBase = ThemeData.light();
+  static final darkBase = ThemeData.dark();
+  static final lightBase = ThemeData.light();
 
   /// Light theme and its settings.
   ThemeData get light => ThemeData(
