@@ -12,7 +12,7 @@ dependencies:
   cached_network_image: ^3.4.1
   cloud_functions: ^6.0.4
   collection: ^1.19.1
-  faker: ^2.2.0
+  faker: ^2.2.0 #Add fake data 
   firebase_auth: ^6.1.2
   firebase_core: ^4.2.1
   google_fonts: ^6.3.3

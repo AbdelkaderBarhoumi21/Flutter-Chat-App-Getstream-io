@@ -43,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
+      iconTheme: Theme.of(context).iconTheme,
       centerTitle: true,
       title: ValueListenableBuilder(
         valueListenable: title,
