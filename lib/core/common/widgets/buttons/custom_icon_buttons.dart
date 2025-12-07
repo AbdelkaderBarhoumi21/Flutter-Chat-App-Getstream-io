@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_app_gestream_io/core/themes/app_theme.dart';
 
-class IconBackground extends StatelessWidget {
-  const IconBackground({
+class IconBackgroundButtons extends StatelessWidget {
+  const IconBackgroundButtons({
     super.key,
     required this.icon,
     required this.onTap,
@@ -30,8 +30,8 @@ class IconBackground extends StatelessWidget {
     );
 }
 
-class IconBorder extends StatelessWidget {
-  const IconBorder({
+class IconBorderButtons extends StatelessWidget {
+  const IconBorderButtons({
     super.key,
     required this.icon,
     required this.onTap,
